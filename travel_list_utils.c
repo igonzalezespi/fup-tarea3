@@ -30,16 +30,15 @@ trav_node* l_trav_remove_front(trav_node* head) {
   trav_node* cursor = head;
   head = head->next;
   cursor->next = NULL;
-  /* is this the last node in the list */
   if(cursor == head)
     head = NULL;
 
-  free(cursor->data->id);
-  free(cursor->data->destination);
-  free(cursor->data->hotel);
-  free(cursor->data->transport);
-  free(cursor->data);
-  free(cursor);
+//  free(cursor->data->id);
+//  free(cursor->data->destination);
+//  free(cursor->data->hotel);
+//  free(cursor->data->transport);
+//  free(cursor->data);
+//  free(cursor);
 
   return head;
 }
@@ -56,29 +55,25 @@ trav_node* l_trav_remove_back(trav_node* head) {
   if(back != NULL)
     back->next = NULL;
 
-  /* if this is the last node in the list*/
   if(cursor == head)
     head = NULL;
 
-  free(cursor->data->id);
-  free(cursor->data->destination);
-  free(cursor->data->hotel);
-  free(cursor->data->transport);
-  free(cursor->data);
-  free(cursor);
+//  free(cursor->data->id);
+//  free(cursor->data->destination);
+//  free(cursor->data->hotel);
+//  free(cursor->data->transport);
+//  free(cursor->data);
+//  free(cursor);
 
   return head;
 }
 
 trav_node* l_trav_remove(trav_node* head, trav_node* to_remove) {
   if(to_remove == head) {
-    /* if the node is the first node */
     return l_trav_remove_front(head);
   } else if(to_remove->next == NULL) {
-    /* if the node is the last node */
     return l_trav_remove_back(head);
   } else {
-    /* if the node is in the middle */
     trav_node* cursor = head;
     while(cursor != NULL) {
       if(cursor->next == to_remove)
@@ -90,12 +85,12 @@ trav_node* l_trav_remove(trav_node* head, trav_node* to_remove) {
       trav_node* tmp = cursor->next;
       cursor->next = tmp->next;
       tmp->next = NULL;
-      free(tmp->data->id);
-      free(tmp->data->destination);
-      free(tmp->data->hotel);
-      free(tmp->data->transport);
-      free(tmp->data);
-      free(tmp);
+//      free(tmp->data->id);
+//      free(tmp->data->destination);
+//      free(tmp->data->hotel);
+//      free(tmp->data->transport);
+//      free(tmp->data);
+//      free(tmp);
     }
     return head;
   }
@@ -134,8 +129,9 @@ void l_trav_display(trav_node* cursor) {
 trav_node* l_trav_search(trav_node* head, char* id) {
   trav_node* cursor = head;
   while(cursor != NULL) {
-    if(strcmp(cursor->data->id, id) == 0)
+    if(strcmp(cursor->data->id, id) == 0) {
       return cursor;
+    }
     cursor = cursor->next;
   }
   return NULL;

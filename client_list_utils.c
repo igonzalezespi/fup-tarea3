@@ -79,13 +79,13 @@ void l_cli_remove_front() {
   if(cursor == head)
     head = NULL;
 
-  l_trav_remove_all(cursor->data->travel_head);
-  free(cursor->data->dni);
-  free(cursor->data->name);
-  free(cursor->data->surname);
-  free(cursor->data->address);
-  free(cursor->data);
-  free(cursor);
+//  l_trav_remove_all(cursor->data->travel_head);
+//  free(cursor->data->dni);
+//  free(cursor->data->name);
+//  free(cursor->data->surname);
+//  free(cursor->data->address);
+//  free(cursor->data);
+//  free(cursor);
 }
 
 void l_cli_remove_back() {
@@ -104,13 +104,13 @@ void l_cli_remove_back() {
   if(cursor == head)
     head = NULL;
 
-  l_trav_remove_all(cursor->data->travel_head);
-  free(cursor->data->dni);
-  free(cursor->data->name);
-  free(cursor->data->surname);
-  free(cursor->data->address);
-  free(cursor->data);
-  free(cursor);
+//  l_trav_remove_all(cursor->data->travel_head);
+//  free(cursor->data->dni);
+//  free(cursor->data->name);
+//  free(cursor->data->surname);
+//  free(cursor->data->address);
+//  free(cursor->data);
+//  free(cursor);
 }
 
 void l_cli_remove(cli_node* to_remove) {
@@ -134,13 +134,13 @@ void l_cli_remove(cli_node* to_remove) {
       cursor->next = tmp->next;
       tmp->next = NULL;
 
-      l_trav_remove_all(tmp->data->travel_head);
-      free(tmp->data->dni);
-      free(tmp->data->name);
-      free(tmp->data->surname);
-      free(tmp->data->address);
-      free(tmp->data);
-      free(tmp);
+//      l_trav_remove_all(tmp->data->travel_head);
+//      free(tmp->data->dni);
+//      free(tmp->data->name);
+//      free(tmp->data->surname);
+//      free(tmp->data->address);
+//      free(tmp->data);
+//      free(tmp);
     }
   }
 }

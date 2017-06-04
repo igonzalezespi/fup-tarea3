@@ -62,7 +62,7 @@ void add_client() {
     cli->travel_autoincrement = 1;
 
     fclose(file);
-//    add_action(1, cli, NULL);
+    add_action(1, cli, NULL);
 
     if (l_cli_insert(cli) != 1) {
 mem_err:
@@ -102,7 +102,7 @@ void remove_client() {
     } else {
       l_cli_remove(node_to_delete);
       printf("Cliente con DNI %s borrado correctamente\n", aux);
-//      add_action(2, node_to_delete->data, NULL);
+      add_action(2, node_to_delete->data, NULL);
     }
     fclose(file);
   }

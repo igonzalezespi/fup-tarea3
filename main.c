@@ -9,13 +9,13 @@
 #include "client_utils.h"
 #include "travel_list_utils.h"
 #include "travel_utils.h"
-//#include "command_stack_utils.h"
-//#include "command_utils.h"
+#include "command_stack_utils.h"
+#include "command_utils.h"
 
 int data;
 
 cli_node* head = NULL;
-//command_node* top = NULL;
+command_node* top = NULL;
 cli_callback disp = l_cli_display;
 
 //// Main
@@ -31,7 +31,7 @@ int main() {
 
 void show_menu() {
   int client_count = l_cli_count();
-//  int command_empty = s_command_empty();
+  int command_empty = s_command_empty();
   CLEARSCR;
   puts("======================");
   puts("Seleccione una opcionnn");
@@ -43,11 +43,11 @@ void show_menu() {
   }
   puts("   S - Salir");
   puts("");
-//  if (command_empty == 0) {
-//    puts("# Comandos");
-//    puts("   D - Deshacer");
+  if (command_empty == 0) {
+    puts("# Comandos");
+    puts("   D - Deshacer");
 //    puts("   R - Rehacer");
-//  }
+  }
   puts("");
   puts("# Clientes");
   puts("   1 - Alta");
@@ -72,7 +72,7 @@ char get_option() {
 void execute() {
   char option;
   int client_count = l_cli_count();
-//  int command_empty = s_command_empty();
+  int command_empty = s_command_empty();
   int pause = 0;
   show_menu();
   option = get_option();
@@ -93,12 +93,11 @@ void execute() {
   } else if (client_count > 0 && option == '4') {
     remove_travel();
     pause = 1;
-//  } else if (command_empty == 0 && option == 'D') {
-//    undo_action();
-//    pause = 1;
+  } else if (command_empty == 0 && option == 'D') {
+    undo_action();
 //  } else if (command_empty == 0 && option == 'R') {
 //    redo_action();
-//    done = 1;
+    done = 1;
   }
   if (pause == 1) {
     system("PAUSE");

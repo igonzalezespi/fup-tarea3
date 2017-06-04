@@ -11,7 +11,7 @@
 
 1493241577 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\clientes.h
 
-1496597650 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\main.c
+1496598959 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -21,6 +21,8 @@
 	"client_utils.h"
 	"travel_list_utils.h"
 	"travel_utils.h"
+	"command_stack_utils.h"
+	"command_utils.h"
 
 1496492259 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\list_utils.h
 	"client_utils.h"
@@ -32,7 +34,7 @@
 	<windows.h>
 	"common.h"
 
-1496597315 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_utils.c
+1496598848 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -45,7 +47,7 @@
 1496582983 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_utils.h
 	"travel_list_utils.h"
 
-1496597286 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_list_utils.c
+1496598791 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_list_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -63,7 +65,7 @@
 
 1496582983 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_utils.h
 
-1496596303 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_utils.c
+1496599879 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -73,8 +75,9 @@
 	"client_list_utils.h"
 	"travel_utils.h"
 	"travel_list_utils.h"
+	"command_utils.h"
 
-1496597599 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_list_utils.c
+1496599985 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_list_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -85,17 +88,19 @@
 	"client_utils.h"
 	"travel_utils.h"
 
-1496596457 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_stack_utils.c
+1496598929 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_stack_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<windows.h>
 	<windows.h>
+	"command_stack_utils.h"
+	"command_utils.h"
 
 1496584053 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_stack_utils.h
 	"command_utils.h"
 
-1496596366 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_utils.c
+1496599985 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

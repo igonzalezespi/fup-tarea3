@@ -8,7 +8,7 @@
 #include "client_list_utils.h"
 #include "travel_utils.h"
 #include "travel_list_utils.h"
-//#include "command_utils.h"
+#include "command_utils.h"
 
 void add_travel() {
   FILE *file;
@@ -101,7 +101,7 @@ mem_err:
         cli_n->data->travel_head = trav_n;
         cli_n->data->travel_autoincrement++;
         printf("Viaje con ID %s cargado correctamente\n", trav->id);
-//        add_action(3, cli_n->data, trav);
+        add_action(3, cli_n->data, trav);
       }
     }
     fclose(file);
@@ -143,7 +143,7 @@ void remove_travel() {
       } else {
         cli_n->data->travel_head = l_trav_remove(cli_n->data->travel_head, node_to_delete);
         printf("Viaje con ID %s borrado con exito\n", id_to_delete);
-//        add_action(4, cli_n->data, node_to_delete->data);
+        add_action(4, cli_n->data, node_to_delete->data);
       }
     }
     fclose(file);
