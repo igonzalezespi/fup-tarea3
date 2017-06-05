@@ -79,6 +79,7 @@ void l_cli_remove_front() {
   if(cursor == head)
     head = NULL;
 
+  // Al implementar el deshacer no tenemos que hacer free
 //  l_trav_remove_all(cursor->data->travel_head);
 //  free(cursor->data->dni);
 //  free(cursor->data->name);
@@ -104,6 +105,7 @@ void l_cli_remove_back() {
   if(cursor == head)
     head = NULL;
 
+  // Al implementar el deshacer no tenemos que hacer free
 //  l_trav_remove_all(cursor->data->travel_head);
 //  free(cursor->data->dni);
 //  free(cursor->data->name);
@@ -115,13 +117,10 @@ void l_cli_remove_back() {
 
 void l_cli_remove(cli_node* to_remove) {
   if(to_remove == head) {
-    /* if the node is the first node */
     l_cli_remove_front();
   } else if(to_remove->next == NULL) {
-    /* if the node is the last node */
     l_cli_remove_back();
   } else {
-    /* if the node is in the middle */
     cli_node* cursor = head;
     while(cursor != NULL) {
       if(cursor->next == to_remove)

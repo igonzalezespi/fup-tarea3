@@ -15,7 +15,8 @@
 int data;
 
 cli_node* head = NULL;
-command_node* top = NULL;
+command_node* top_undo = NULL;
+command_node* top_redo = NULL;
 cli_callback disp = l_cli_display;
 
 //// Main
@@ -31,10 +32,11 @@ int main() {
 
 void show_menu() {
   int client_count = l_cli_count();
-  int command_empty = s_command_empty();
+  int undo_empty = s_command_empty(top_undo);
+  int redo_empty = s_command_empty(top_redo);
   CLEARSCR;
   puts("======================");
-  puts("Seleccione una opcionnn");
+  puts("Seleccione una opcion");
   puts("======================");
   puts("");
   puts("# Acciones");
@@ -43,12 +45,16 @@ void show_menu() {
   }
   puts("   S - Salir");
   puts("");
-  if (command_empty == 0) {
+  if (undo_empty == 0 || redo_empty == 0) {
     puts("# Comandos");
-    puts("   D - Deshacer");
-//    puts("   R - Rehacer");
+    if (undo_empty == 0) {
+      puts("   D - Deshacer");
+    }
+    if (redo_empty == 0) {
+      puts("   R - Rehacer");
+    }
+    puts("");
   }
-  puts("");
   puts("# Clientes");
   puts("   1 - Alta");
   if (client_count > 0) {
@@ -72,7 +78,8 @@ char get_option() {
 void execute() {
   char option;
   int client_count = l_cli_count();
-  int command_empty = s_command_empty();
+  int undo_empty = s_command_empty(top_undo);
+  int redo_empty = s_command_empty(top_redo);
   int pause = 0;
   show_menu();
   option = get_option();
@@ -93,11 +100,10 @@ void execute() {
   } else if (client_count > 0 && option == '4') {
     remove_travel();
     pause = 1;
-  } else if (command_empty == 0 && option == 'D') {
+  } else if (undo_empty == 0 && option == 'D') {
     undo_action();
-//  } else if (command_empty == 0 && option == 'R') {
-//    redo_action();
-    done = 1;
+  } else if (redo_empty == 0 && option == 'R') {
+    redo_action();
   }
   if (pause == 1) {
     system("PAUSE");

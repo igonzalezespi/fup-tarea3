@@ -3,17 +3,15 @@
 
 #include "client_utils.h"
 #include "travel_utils.h"
+#include "command_stack_utils.h"
 
-typedef struct {
-  int action;
-  client* cli;
-  travel* trav;
-} command;
+command_node* add_action(command_node* stack, int action, client* cli, travel* trav);
 
-void add_action(int action, client* cli, travel* trav);
-void remove_action(void);
-
+void remove_undo_action(void);
 void undo_action(void);
+
+void remove_redo_action(void);
+void remove_all_redo(void);
 void redo_action(void);
 
 

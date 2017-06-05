@@ -21,10 +21,19 @@
 #define CLIENT_NOT_FOUND "ERROR. Cliente no encontrado."
 #define TRAVEL_NOT_FOUND "ERROR. Viaje no encontrado."
 
+#include "client_utils.h"
+#include "travel_utils.h"
+
+typedef struct {
+  int action;
+  client* cli;
+  travel* trav;
+} command;
+
 //// Prototypes
+void show_menu(void);
 char get_option(void);
 void execute(void);
-void show_menu(void);
 void display_all(void);
 
 void set_filename(char[]);

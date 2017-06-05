@@ -7,11 +7,13 @@
 	"common.h"
 	"clientes.h"
 
-1496575629 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\common.h
+1496704306 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\common.h
+	"client_utils.h"
+	"travel_utils.h"
 
 1493241577 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\clientes.h
 
-1496598959 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\main.c
+1496704420 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -34,7 +36,7 @@
 	<windows.h>
 	"common.h"
 
-1496598848 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_utils.c
+1496704528 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -43,11 +45,12 @@
 	"client_utils.h"
 	"client_list_utils.h"
 	"command_utils.h"
+	"command_stack_utils.h"
 
-1496582983 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_utils.h
+1496570351 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_utils.h
 	"travel_list_utils.h"
 
-1496598791 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_list_utils.c
+1496703677 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_list_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -57,15 +60,15 @@
 	"client_list_utils.h"
 	"travel_list_utils.h"
 
-1496597627 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_list_utils.h
+1496703310 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\client_list_utils.h
 	"client_utils.h"
 
-1496597663 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_list_utils.h
+1496703913 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_list_utils.h
 	"travel_utils.h"
 
-1496582983 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_utils.h
+1496570351 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_utils.h
 
-1496599879 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_utils.c
+1496705023 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\travel_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -84,11 +87,12 @@
 	<windows.h>
 	"travel_list_utils.h"
 
-1496582159 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_utils.h
+1496704235 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_utils.h
 	"client_utils.h"
 	"travel_utils.h"
+	"command_stack_utils.h"
 
-1496598929 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_stack_utils.c
+1496703426 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_stack_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -97,10 +101,10 @@
 	"command_stack_utils.h"
 	"command_utils.h"
 
-1496584053 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_stack_utils.h
-	"command_utils.h"
+1496704325 d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_stack_utils.h
+	"common.h"
 
-1496599985 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_utils.c
+1496704572 source:d:\drive\universidad\fup ii\tareas\tarea3\tarea3\command_utils.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

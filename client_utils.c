@@ -7,6 +7,7 @@
 #include "client_utils.h"
 #include "client_list_utils.h"
 #include "command_utils.h"
+#include "command_stack_utils.h"
 
 void add_client() {
   FILE *file;
@@ -62,7 +63,6 @@ void add_client() {
     cli->travel_autoincrement = 1;
 
     fclose(file);
-    add_action(1, cli, NULL);
 
     if (l_cli_insert(cli) != 1) {
 mem_err:
@@ -74,6 +74,8 @@ mem_err:
       free(cli);
     } else {
       printf("Cliente con DNI %s cargado correctamente\n", cli->dni);
+      remove_all_redo();
+      top_undo = add_action(top_undo, 1, cli, NULL);
     }
     fclose(file);
   }
@@ -102,7 +104,8 @@ void remove_client() {
     } else {
       l_cli_remove(node_to_delete);
       printf("Cliente con DNI %s borrado correctamente\n", aux);
-      add_action(2, node_to_delete->data, NULL);
+      remove_all_redo();
+      top_undo = add_action(top_undo, 2, node_to_delete->data, NULL);
     }
     fclose(file);
   }
